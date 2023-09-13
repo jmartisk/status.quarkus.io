@@ -32,7 +32,7 @@ public class IssuesService {
     private volatile Stats bugsStats;
     private volatile Stats enhancementsStats;
 
-    @Scheduled(every = "6H")
+    @Scheduled(every = "2m")
     public void updateStatus() throws Exception {
         bugsStats = buildIssuesMonthlyStats(BUG_NAME, BUG_LABEL);
         enhancementsStats = buildIssuesMonthlyStats(ENHANCEMENT_NAME, ENHANCEMENT_LABEL);

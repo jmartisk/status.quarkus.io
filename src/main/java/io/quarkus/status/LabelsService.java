@@ -26,7 +26,7 @@ public class LabelsService {
     private volatile List<Label> bugsLabels;
     private volatile List<Label> enhancementsLabels;
 
-    @Scheduled(every = "6H")
+    @Scheduled(every = "2m")
     public void updateStatus() throws Exception {
         bugsLabels = buildLabelsStats(BUG_LABEL);
         enhancementsLabels = buildLabelsStats(ENHANCEMENT_LABEL);

@@ -48,7 +48,7 @@ public class StatusService {
 
     private volatile Status status;
 
-    @Scheduled(every = "10m")
+    @Scheduled(every = "2m")
     public void updateStatus() throws Exception {
         status = buildStatus();
     }
